@@ -10,7 +10,7 @@ namespace ContosoCrafts.WebSite.Pages
 {
    /// <summary>
    /// Pujith Neelagiri 
-   /// </summary> 
+   /// </summary>
     public class IndexModel : PageModel
     {
         Added name Mike Koenig to IndexModel Comment in Index.cshtml.cs
