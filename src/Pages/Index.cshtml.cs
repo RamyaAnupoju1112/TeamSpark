@@ -8,14 +8,14 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-   /// <summary>
-   /// Pujith Neelagiri 
-   /// </summary>
-   
-   /// <summary>
-   /// Ramya Anupoju 
-   /// </summary>
-   /// Sagar Vinayak
+    /// <summary>
+    /// Pujith Neelagiri 
+    /// </summary>
+    /// Sanchita Jain
+    /// <summary>
+    /// Ramya Anupoju 
+    /// </summary>
+    /// Sagar Vinayak
     public class IndexModel : PageModel
     {
        
