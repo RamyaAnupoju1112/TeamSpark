@@ -10,7 +10,7 @@ namespace ContosoCrafts.WebSite.Pages
 {
    /// <summary>
    /// Pujith Neelagiri 
-   /// </summary>
+   /// </summary> 
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
