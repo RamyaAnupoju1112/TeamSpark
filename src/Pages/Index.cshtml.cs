@@ -8,8 +8,12 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+   /// <summary>
+   /// Pujith Neelagiri 
+   /// </summary>
     public class IndexModel : PageModel
     {
+        Added name Mike Koenig to IndexModel Comment in Index.cshtml.cs
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger,
