@@ -4,15 +4,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<p>
-    <h1> About us </h1>
-    Candidates aspiring to apply for a company can use our application to do due diligence about the
-    work sponsorship provided by the organization. Our application would provide users with multiple
-    ways to check whether an organization would sponsor their work visa or not. They can search with
-    just the company name, the company name with role they are seeking to apply, or just the linked.in
-    job post link. We also plan on showing additional statistics about the company’s work visa
-    sponsorship.
-</p>
+
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
 <script src="_framework/blazor.server.js"></script>
