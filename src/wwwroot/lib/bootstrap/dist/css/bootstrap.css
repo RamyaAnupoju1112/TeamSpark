@@ -196,8 +196,7 @@ figure {
 }
 
 img {
-  vertical-align: middle;
-  border-style: none;
+  margin-top:25px
 }
 
 svg {
@@ -4148,6 +4147,7 @@ input[type="button"].btn-block {
   position: relative;
   display: -ms-flexbox;
   display: flex;
+  height : 120px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-align: center;
@@ -4454,7 +4454,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+    color: #004085;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
