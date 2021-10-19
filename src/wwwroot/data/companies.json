@@ -1,0 +1,14 @@
+[
+  {
+    "Id": "Test",
+    "Name": "Test Company",
+    "H1BSupport": "True",
+    "JobRoleName": "Test Role"
+  },
+  {
+    "Id": "Test",
+    "Name": "Test Company2",
+    "H1BSupport": "False",
+    "JobRoleName": "Test Role 2"
+  }
+]
