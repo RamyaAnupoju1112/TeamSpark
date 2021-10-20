@@ -36,6 +36,28 @@ namespace ContosoCrafts.WebSite.Controllers
             get { return Path.Combine(this.webHostEnvironment.WebRootPath, "data", "companies.json"); }
         }
 
+        public IActionResult Edit()
+        {
+            
+            return View("Edit");
+        }
+        public IActionResult Create()
+        {
+
+            return View("Create");
+        }
+        public IActionResult Delete()
+        {
+
+            return View("Delete");
+        }
+        public IActionResult Details()
+        {
+
+            return View("Details");
+        }
+
+
         /// <summary>
         /// GetAllData method is used to Get the list of all the companies, it parses the JSON file and converts into company model list
         /// </summary>
