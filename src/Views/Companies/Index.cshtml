@@ -8,7 +8,7 @@
 <h1>List of Companies</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @Html.ActionLink("Create", "Create", new { /* id=item.PrimaryKey */ }) 
 </p>
 <table class="table">
     <thead>
