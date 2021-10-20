@@ -1,14 +1,57 @@
 [
   {
-    "Id": "Test",
-    "Name": "Test Company",
+    "Id": "111112",
+    "Name": "Microsoft",
     "H1BSupport": "True",
-    "JobRoleName": "Test Role"
+    "JobRoleName": "Software Developer"
   },
   {
-    "Id": "Test",
-    "Name": "Test Company2",
+    "Id": "111113",
+    "Name": "Amazon",
+    "H1BSupport": "True",
+    "JobRoleName": "Marketing Manager"
+  },
+  {
+    "Id": "111113",
+    "Name": "Amazon",
+    "H1BSupport": "True",
+    "JobRoleName": "Marketing Manager"
+  },
+  {
+    "Id": "111114",
+    "Name": "Google",
+    "H1BSupport": "True",
+    "JobRoleName": "Software Developer"
+  },
+  {
+    "Id": "111115",
+    "Name": "Apple",
+    "H1BSupport": "True",
+    "JobRoleName": "Software Developer - Intern"
+  },
+  {
+    "Id": "111116",
+    "Name": "Salesforce",
     "H1BSupport": "False",
-    "JobRoleName": "Test Role 2"
+    "JobRoleName": "Salesforce Developer"
+  },
+  {
+    "Id": "111117",
+    "Name": "Adobe",
+    "H1BSupport": "False",
+    "JobRoleName": "Tester"
+  },
+  {
+    "Id": "111118",
+    "Name": "Facebook",
+    "H1BSupport": "True",
+    "JobRoleName": "Frontend Developer"
+  },
+  {
+    "Id": "111119",
+    "Name": "Expedia",
+    "H1BSupport": "False",
+    "JobRoleName": "Finance Analyst"
   }
+
 ]
