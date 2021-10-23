@@ -1,0 +1,48 @@
+﻿@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileCompanyService CompanyService
+@model ContosoCrafts.WebSite.Pages.Companies.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete page";
+}
+
+<h1>Delete</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Company.Id)
+
+        <div class="form-group">
+            <label asp-for="Company.Id" class="control-label"></label>
+            <input asp-for="Company.Id" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Company.Name" class="control-label"></label>
+            <input asp-for="Company.Name" class="form-control" disabled/>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Company.H1BSupport" class="control-label"></label>
+            <input asp-for="Company.H1BSupport" class="form-control" disabled/>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Company.JobRoleName" class="control-label"></label>
+            <input asp-for="Company.JobRoleName" class="form-control" disabled/>
+        </div>
+
+        <h1>Confirm Delete of this item</h1>
+
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
