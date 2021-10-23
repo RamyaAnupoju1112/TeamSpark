@@ -1,0 +1,34 @@
+﻿@page "/Companies/Index"
+@model ContosoCrafts.WebSite.Pages.Companies.IndexModel
+@{
+    ViewData["Title"] = "Index page";
+}
+
+<div class="container">
+
+    <a asp-page="Create" class="btn btn-link">+ Create</a>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in Model.Companies)
+            {
+            <tr>
+                <td>@company.Id</td>
+                <td>@company.Name</td>
+                <td>@company.H1BSupport</td>
+                <td>@company.JobRoleName</td>
+                <td><a asp-page="Read" asp-route-id="@company.Id">Read</a></td>
+                <td><a asp-page="Update" asp-route-id="@company.Id" class="btn btn-primary">Read</a> </td>
+                <td><a asp-page="Update" asp-route-id="@company.Id" class="btn btn-primary">Update</a> </td>
+                <td><a asp-page="Delete" asp-route-id="@company.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
