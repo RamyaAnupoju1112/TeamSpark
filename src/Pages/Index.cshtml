@@ -3,14 +3,14 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-}
+} 
 <p>
 
     <!--added navigation bar-->
     <div class="navigation">
 
         <a href="#">home</a>
-        <a asp-controller="Companies" asp-action="Index">companies</a>
+        <a  asp-area="" asp-page="./Companies/Index">Companies</a>
     </div>
    
 
