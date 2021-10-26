@@ -6,24 +6,24 @@
 
 <div class="container">
 
-    <a asp-page="Create" class="btn btn-link">+ Create</a>
+    <a asp-page="create" class="btn btn-link">Add company</a>
 
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Action</th>
+                <th>Name</th>
+                <th>H1B Support</th>
+                <th>Job Role</th>
+                
             </tr>
         </thead>
         <tbody>
             @foreach (var company in Model.Companies)
             {
             <tr>
-                <td>@company.Id</td>
                 <td>@company.Name</td>
                 <td>@company.H1BSupport</td>
                 <td>@company.JobRoleName</td>
-                <td><a asp-page="Read" asp-route-id="@company.Id">Read</a></td>
                 <td><a asp-page="Update" asp-route-id="@company.Id" class="btn btn-primary">Read</a> </td>
                 <td><a asp-page="Update" asp-route-id="@company.Id" class="btn btn-primary">Update</a> </td>
                 <td><a asp-page="Delete" asp-route-id="@company.Id" class="btn btn-danger">Delete</a></td>
