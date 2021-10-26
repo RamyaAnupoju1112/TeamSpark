@@ -1,0 +1,15 @@
+﻿@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileCompanyService CompanyService
+@model ContosoCrafts.WebSite.Pages.Companies.UpdateModel
+
+@{
+    ViewData["Title"] = "Update page";
+}
+
+<h1>Update</h1>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
