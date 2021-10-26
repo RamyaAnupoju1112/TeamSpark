@@ -42,6 +42,32 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
+        /// <summary>
+        /// Create a new product using default values
+        /// After create the user can update to set values
+        /// </summary>
+        /// <returns></returns>
+
+        public CompanyModel CreateData()
+        {
+            var data = new CompanyModel()
+            {
+                Id = System.Guid.NewGuid().ToString(),
+                Name = "Enter Name",
+                H1BSupport = "Enter H1B details",
+                JobRoleName = "Enter job role",
+            };
+
+            // Get the current set, and append the new record to it becuase IEnumerable does not have Add
+            var dataSet = GetAllData();
+            dataSet = dataSet.Append(data);
+
+            SaveData(dataSet);
+
+            return data;
+        }
+
+
         public CompanyModel DeleteData(string id)
         {
             // Get the current set, and append the new record to it
