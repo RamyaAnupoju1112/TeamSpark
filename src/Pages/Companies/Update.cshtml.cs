@@ -45,7 +45,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// Then return to the index page
         /// </summary>
         /// <returns></returns>
-        /*public IActionResult OnPost()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
@@ -55,6 +55,6 @@ namespace ContosoCrafts.WebSite.Pages.Companies
             CompanyService.UpdateData(Company);
 
             return RedirectToPage("./Index");
-        }*/
+        }
     }
 }
