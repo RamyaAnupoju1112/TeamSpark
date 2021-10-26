@@ -67,6 +67,27 @@ namespace ContosoCrafts.WebSite.Services
             return data;
         }
 
+        public CompanyModel UpdateData(CompanyModel data)
+        {
+            var companies = GetAllData();
+            var companyData = companies.FirstOrDefault(x => x.Id.Equals(data.Id));
+            if (companyData == null)
+            {
+                return null;
+            }
+
+            // Update the data to the new passed in values
+            companyData.Id = data.Id;
+            companyData.Name = data.Name.Trim();
+            companyData.JobRoleName = data.JobRoleName;
+            companyData.H1BSupport = data.H1BSupport;
+
+
+
+            SaveData(companies);
+
+            return companyData;
+        }
 
         public CompanyModel DeleteData(string id)
         {
@@ -95,6 +116,6 @@ namespace ContosoCrafts.WebSite.Services
                 );
             }
         }
-        
+
     }
 }
