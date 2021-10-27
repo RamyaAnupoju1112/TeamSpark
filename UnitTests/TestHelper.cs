@@ -38,6 +38,7 @@ namespace UnitTests
         public static TempDataDictionary TempData;
         public static PageContext PageContext;
         public static JsonFileProductService ProductService;
+        public static JsonFileCompanyService CompanyService;
 
         /// <summary>
         /// Default Constructor
@@ -74,6 +75,14 @@ namespace UnitTests
             JsonFileProductService productService;
 
             productService = new JsonFileProductService(TestHelper.MockWebHostEnvironment.Object);
+
+            //Mocking company service to be used for testcases
+            CompanyService = new JsonFileCompanyService(MockWebHostEnvironment.Object);
+
+            JsonFileCompanyService companyService;
+
+            companyService = new JsonFileCompanyService(TestHelper.MockWebHostEnvironment.Object);
+
         }
     }
 }
