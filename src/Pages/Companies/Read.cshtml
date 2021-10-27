@@ -7,17 +7,15 @@
     ViewData["Title"] = "Read page";
 }
 
-<h1>Read</h1>
+<h1>@Model.Company.Name</h1>
 
 <div class="container">
     <table class="table table-bordered table-striped">
         <tr>
-            <th>Company Name</th>
             <th>Job Role Name Name</th>
             <th>H1B Support</th>
         </tr>
         <tr>
-            <td class="title" id="companyId">@Model.Company.Name</td>
             <td class="title" id="companyId">@Model.Company.JobRoleName</td>
             <td class="title" id="companyId">@Model.Company.H1BSupport</td>
         </tr>
