@@ -25,7 +25,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         public JsonFileCompanyService CompanyService { get; }
         // Collection of the Data
         public IEnumerable<CompanyModel> Companies { get; private set; }
-
+        public string Search { get; set; }
         /// <summary>
         /// REST OnGet, return all data
         /// </summary>
