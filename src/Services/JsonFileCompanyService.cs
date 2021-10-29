@@ -23,7 +23,7 @@ namespace ContosoCrafts.WebSite.Services
         public IEnumerable<CompanyModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
-            {
+            {                
                 return JsonSerializer.Deserialize<CompanyModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
@@ -42,6 +42,20 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
+
+
+        public IEnumerable<CompanyModel> SearchCompany(string Search)
+        {
+            var companies = GetAllData();
+            if(string.IsNullOrEmpty(Search))
+            {
+                return companies;
+            }
+            return companies.Where(e => e.Name.Contains(Search));
+        }
+
+
+
         /// <summary>
         /// Create a new product using default values
         /// After create the user can update to set values
