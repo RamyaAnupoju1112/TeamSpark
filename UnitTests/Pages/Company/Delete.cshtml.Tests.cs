@@ -22,7 +22,7 @@ namespace UnitTests.Pages.Company.Delete
         #endregion TestSetup
 
         #region OnGet
-        [Test]
+        /*[Test]
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -33,7 +33,7 @@ namespace UnitTests.Pages.Company.Delete
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
-        }
+        }*/
         #endregion OnGet
 
         #region OnPost
