@@ -15,7 +15,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Please enter if company supports H1B sponsorship")]
-        [RegularExpression(@"true|True|false|False")]
+        [RegularExpression(@"true|True|false|False", ErrorMessage = "Value can only be 'True' or 'False'")]
         public string H1BSupport { get; set; }
         public string JobRoleName { get; set; }
     }
