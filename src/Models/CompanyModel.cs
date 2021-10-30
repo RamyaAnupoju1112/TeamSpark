@@ -19,6 +19,7 @@ namespace ContosoCrafts.WebSite.Models
         public string H1BSupport { get; set; }
 
         [Required(ErrorMessage = "Please enter Job role Name")]
+        [RegularExpression(@"^[a-z A-Z]+$")]
         public string JobRoleName { get; set; }
     }
 }
