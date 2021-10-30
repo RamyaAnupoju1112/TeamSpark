@@ -10,7 +10,7 @@ namespace ContosoCrafts.WebSite.Models
     {
         public string Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter Company Name")]
         public string Name { get; set; }
         public string H1BSupport { get; set; }
         public string JobRoleName { get; set; }
