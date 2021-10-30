@@ -11,6 +11,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Please enter Company Name")]
+        [RegularExpression(@"^[a-z A-Z]+$")]
         public string Name { get; set; }
         public string H1BSupport { get; set; }
         public string JobRoleName { get; set; }
