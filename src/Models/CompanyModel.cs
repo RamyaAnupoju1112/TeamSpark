@@ -18,7 +18,7 @@ namespace ContosoCrafts.WebSite.Models
         [RegularExpression(@"true|True|false|False", ErrorMessage = "Value can only be 'True' or 'False'")]
         public string H1BSupport { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter Job role Name")]
         public string JobRoleName { get; set; }
     }
 }
