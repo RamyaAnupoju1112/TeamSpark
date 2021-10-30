@@ -67,9 +67,9 @@ namespace ContosoCrafts.WebSite.Services
             var data = new CompanyModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
-                Name = "Enter Name",
-                H1BSupport = "Enter H1B details",
-                JobRoleName = "Enter job role",
+                Name = "",
+                H1BSupport = "",
+                JobRoleName = "",
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
