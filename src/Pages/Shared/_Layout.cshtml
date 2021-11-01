@@ -16,7 +16,7 @@
         .navigation {
             overflow: hidden;
             background-color: #252150;
-        }
+            }
             .navigation a {
                 float: left;
                 color: aliceblue;
@@ -69,44 +69,53 @@
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/Index">Geek Sponsors</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    
     <div class="container">
+        
+    </div>
+    <div class="container">
+        <!--added navigation bar-->
+        <div class="navigation">
+            <a class="btn btn-link " href="/Index">home</a>
+            <a class="btn btn-link " asp-page="./Companies/Index">Companies</a>
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
     <footer>
-        
-            <div class="footer1">
-                <div class="roww">
-                  <div class="columnn">
+
+        <div class="footer1">
+            <div class="roww">
+                <div class="columnn">
                     <h2>Contact Us</h2>
                     <h6>svinayak@seattleu.edu</h6>
                     <h6>ranupoju@seattleu.edu </h6>
                     <h6>pneelagiri@seattleu.edu</h6>
                     <h6>sjain4@seattleu.edu</h6>
-        
-                  </div>
-                  <div class="columnn">
+
+                </div>
+                <div class="columnn">
                     <h2>Maintened By</h2>
                     <h6>Sagar</h6>
                     <h6>Ramya</h6>
                     <h6>Pruthvi</h6>
-                   <h6> Sanchita</h6>
-                  </div>
-                  <div class="columnn">
+                    <h6> Sanchita</h6>
+                </div>
+                <div class="columnn">
                     <h2>Privacy Statement</h2>
-    
+
                     <h6> © 2020 Copyright: Geek Sponsors </h6>
-                  </div>
-              
-        </div>
+                </div>
+
+            </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
