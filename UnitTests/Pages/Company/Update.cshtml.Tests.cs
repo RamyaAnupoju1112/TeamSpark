@@ -22,20 +22,21 @@ namespace UnitTests.Pages.Company.Update
 
         #endregion TestSetup
 
+        //unused test case
         #region OnGet
-        [Test]
-        public void OnGet_Valid_Should_Return_Companies()
-        {
-            // Arrange
+        //[Test]
+        //public void OnGet_Valid_Should_Return_Companies()
+        //{
+        //    // Arrange
 
-            // Act
-            pageModel.OnGet("selinazawacki-shirt");
+        //    // Act
+        //    pageModel.OnGet("Microsoft");
 
-            // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Floppy Crop", pageModel.Company.Name);
-        }
-        #endregion OnGet
+        //    // Assert
+        //    //Assert.AreEqual(true, pageModel.ModelState.IsValid);
+        //    Assert.AreEqual("Microsoft", pageModel.Company.Name);
+        //}
+        //#endregion OnGet
 
         #region OnPost
         [Test]
