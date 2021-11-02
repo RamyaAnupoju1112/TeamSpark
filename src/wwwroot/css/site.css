@@ -102,6 +102,33 @@ button.accept-policy {
   line-height: inherit;
 }
 
+/* Styling for footer*/
+
+.footer {
+    bottom: 0
+}
+
+
+/* Create three equal columns that floats next to each other */
+.footer1 .columnn {
+    float: left;
+    margin-top: 148px;
+    width: 33.33%;
+    color: white;
+    padding: 10px;
+    background-color: #252150;
+    height: 190px;
+    text-align: center /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.footer1 .roww:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
