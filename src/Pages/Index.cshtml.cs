@@ -8,17 +8,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-    /// <summary>
-    /// Pujith Neelagiri 
-    /// </summary>
-    /// Sanchita Jain
-    /// <summary>
-    /// Ramya Anupoju 
-    /// </summary>
-    /// Sagar Vinayak
     public class IndexModel : PageModel
     {
-       
+       //using Ilogger to log error messages 
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger,
@@ -28,9 +20,11 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        // Data middletier
         public JsonFileProductService ProductService { get; }
         public IEnumerable<ProductModel> Products { get; private set; }
 
+        /// REST Get request
         public void OnGet()
         {
             Products = ProductService.GetAllData();
