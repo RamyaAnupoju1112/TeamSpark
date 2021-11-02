@@ -102,6 +102,57 @@ button.accept-policy {
   line-height: inherit;
 }
 
+/* Styling for footer*/
+
+.footer {
+    bottom: 0
+}
+
+
+/* Create three equal columns that floats next to each other */
+.footer1 .columnn {
+    float: left;
+    margin-top: 148px;
+    width: 33.33%;
+    color: white;
+    padding: 10px;
+    background-color: #252150;
+    height: 190px;
+    text-align: center /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.footer1 .roww:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*styling for navigation bar*/
+.navigation {
+    overflow: hidden;
+    background-color: #252150;
+}
+
+    .navigation a {
+        float: left;
+        color: aliceblue;
+        text-align: center;
+        padding: 20px 16px;
+        text-decoration: blink;
+        width: 100px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        .navigation a:hover {
+            color: #000;
+            background: #ddd;
+        }
+
+
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
