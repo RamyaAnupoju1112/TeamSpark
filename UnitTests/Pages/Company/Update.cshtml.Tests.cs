@@ -24,19 +24,19 @@ namespace UnitTests.Pages.Company.Update
 
         //unused test case
         #region OnGet
-        //[Test]
-        //public void OnGet_Valid_Should_Return_Companies()
-        //{
-        //    // Arrange
+        [Test]
+        public void OnGet_Valid_Should_Return_Companies()
+        {
+            // Arrange
 
-        //    // Act
-        //    pageModel.OnGet("Microsoft");
+            // Act
+            pageModel.OnGet("111112");
 
-        //    // Assert
-        //    //Assert.AreEqual(true, pageModel.ModelState.IsValid);
-        //    Assert.AreEqual("Microsoft", pageModel.Company.Name);
-        //}
-        //#endregion OnGet
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual("Microsoft", pageModel.Company.Name);
+        }
+        #endregion OnGet
 
         #region OnPost
         [Test]
