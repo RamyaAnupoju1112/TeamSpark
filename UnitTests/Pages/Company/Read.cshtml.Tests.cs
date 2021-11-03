@@ -22,6 +22,7 @@ namespace UnitTests.Pages.Company
 
         #region OnGet
         [Test]
+        //Testing onget valid should return all Companies
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
