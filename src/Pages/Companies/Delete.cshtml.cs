@@ -49,13 +49,11 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            var company = CompanyService.DeleteData(Company.Id);
+            if (company == null)
             {
                 return Page();
             }
-
-            CompanyService.DeleteData(Company.Id);
-
             return RedirectToPage("./Index");
         }
     }
