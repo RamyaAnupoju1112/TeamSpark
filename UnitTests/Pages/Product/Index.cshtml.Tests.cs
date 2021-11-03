@@ -27,6 +27,7 @@ namespace UnitTests.Pages.Product.Index
 
         #region OnGet
         [Test]
+        // On making a get call the request should return all the companies
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
