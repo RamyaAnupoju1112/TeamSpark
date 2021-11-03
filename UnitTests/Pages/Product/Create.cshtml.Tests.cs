@@ -22,6 +22,7 @@ namespace UnitTests.Pages.Product.Create
 
         #endregion TestSetup
 
+        // Testing If on get the it is returnig all the comapny names
         #region OnGet
         [Test]
         public void OnGet_Valid_Should_Return_Products()
@@ -34,7 +35,7 @@ namespace UnitTests.Pages.Product.Create
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(oldCount+1, TestHelper.ProductService.GetAllData().Count());
+            Assert.AreEqual(oldCount + 1, TestHelper.ProductService.GetAllData().Count());
         }
         #endregion OnGet
     }
