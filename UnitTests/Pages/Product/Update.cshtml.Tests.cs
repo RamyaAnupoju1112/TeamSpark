@@ -25,6 +25,7 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnGet
         [Test]
+        // Testing If on GET the it is returnig all the comapny names
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -40,6 +41,7 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnPost
         [Test]
+        // Testing If on POST the it is returnig all the comapny names
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
