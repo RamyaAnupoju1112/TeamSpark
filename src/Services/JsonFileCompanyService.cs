@@ -11,29 +11,23 @@ namespace ContosoCrafts.WebSite.Services
 {
     public class JsonFileCompanyService
     {
+        // Setting the the web hosting environment.
         public JsonFileCompanyService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
+
         public IWebHostEnvironment WebHostEnvironment { get; }
+
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "companies.json"); }
         }
+
+        // REST call to read all data from the JSON files
         public IEnumerable<CompanyModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
-            {                
-                return JsonSerializer.Deserialize<CompanyModel[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-            }
-        }
-        public IEnumerable<CompanyModel> GetCompanies()
-        {
-            using (var jsonFileReader = System.IO.File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<CompanyModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
@@ -43,7 +37,7 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-
+        // REST call to search data which is fetched
         public IEnumerable<CompanyModel> SearchCompany(string Search)
         {
             var companies = GetAllData();
@@ -53,8 +47,6 @@ namespace ContosoCrafts.WebSite.Services
             }
             return companies.Where(e => e.Name.Contains(Search));
         }
-
-
 
         /// <summary>
         /// Create a new product using default values
@@ -95,8 +87,6 @@ namespace ContosoCrafts.WebSite.Services
             companyData.Name = data.Name.Trim();
             companyData.JobRoleName = data.JobRoleName;
             companyData.H1BSupport = data.H1BSupport;
-
-
 
             SaveData(companies);
 
