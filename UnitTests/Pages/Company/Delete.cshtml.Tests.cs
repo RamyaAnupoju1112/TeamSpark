@@ -23,6 +23,7 @@ namespace UnitTests.Pages.Company.Delete
 
         #region OnGet
         [Test]
+        //Testing onget valid should return all companies
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -37,6 +38,7 @@ namespace UnitTests.Pages.Company.Delete
 
         #region OnPost
         [Test]
+        //Testing onget valid should return all products
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
