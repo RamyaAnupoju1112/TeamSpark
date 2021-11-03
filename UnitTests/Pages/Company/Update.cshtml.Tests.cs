@@ -25,6 +25,7 @@ namespace UnitTests.Pages.Company.Update
         //unused test case
         #region OnGet
         [Test]
+        // Testing If on GET the it is returnig all the comapany names
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -40,6 +41,7 @@ namespace UnitTests.Pages.Company.Update
 
         #region OnPost
         [Test]
+        // Testing If on POST the it is returnig all the company names
         public void OnPost_Valid_Should_Return_Companies()
         {
             // Arrange
