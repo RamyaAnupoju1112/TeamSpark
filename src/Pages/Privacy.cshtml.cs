@@ -5,6 +5,7 @@ namespace ContosoCrafts.WebSite.Pages
 {
     public class PrivacyModel : PageModel
     {
+        //using Ilogger to log error messages
         private readonly ILogger<PrivacyModel> _logger;
 
         public PrivacyModel(ILogger<PrivacyModel> logger)
@@ -12,6 +13,7 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
         }
 
+        /// REST Get request
         public void OnGet()
         {
         }
