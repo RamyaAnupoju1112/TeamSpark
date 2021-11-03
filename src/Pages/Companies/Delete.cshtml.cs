@@ -50,10 +50,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         public IActionResult OnPost()
         {
             var company = CompanyService.DeleteData(Company.Id);
-            if (company == null)
-            {
-                return Page();
-            }
+            
             return RedirectToPage("./Index");
         }
     }
