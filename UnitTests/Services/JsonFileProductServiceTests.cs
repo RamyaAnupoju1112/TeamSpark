@@ -22,6 +22,7 @@ namespace UnitTests.Pages.Product.AddRating
 
         #region AddRating
         [Test]
+        //Testing to check if a invalid product null will return false
         public void AddRating_InValid_Product_Null_Should_Return_False()
         {
             // Arrange
@@ -34,6 +35,7 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         [Test]
+        
         public void AddRating_InValid_()
         {
             // Arrange
@@ -48,6 +50,7 @@ namespace UnitTests.Pages.Product.AddRating
         // ....
 
         [Test]
+        //Testing AddRating for valid product and valid rating should return true
         public void AddRating_Valid_Product_Valid_Rating_Valid_Should_Return_True()
         {
             // Arrange
