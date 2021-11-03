@@ -24,6 +24,7 @@ namespace UnitTests.Pages.Product.Read
 
         #region OnGet
         [Test]
+        //Testing onget valid should return all products
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -37,6 +38,7 @@ namespace UnitTests.Pages.Product.Read
         }
 
         [Test]
+        //Testing onGet Invalid
         public void OnGet_InValid_Id_Bougs_Should_Return_Products()
         {
             // Arrange
