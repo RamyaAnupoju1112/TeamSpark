@@ -31,6 +31,7 @@ namespace UnitTests.Pages.Error
 
         #region OnGet
         [Test]
+        // Test case to validate that on valid activity a valid RequestId is returned
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
@@ -50,6 +51,7 @@ namespace UnitTests.Pages.Error
         }
 
         [Test]
+        // Test case to validate that on invalid activity, traceidentifier returns a RequestId
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
             // Arrange
