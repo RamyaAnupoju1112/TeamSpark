@@ -30,11 +30,25 @@ namespace UnitTests.Controllers
         {
             //Arrange
             var data = testProductController.Get().ToList();
-
+            
             //Act
 
             //Assert
             Assert.AreEqual(typeof(List<ProductModel>), data.GetType());
+        }
+
+        [Test]
+        public void Get_Valid_ToString_Should_Return_String()
+        {
+            {
+                //Arrange
+                var data = testProductController.Get().FirstOrDefault().ToString();
+
+                //Act
+
+                //Assert
+                Assert.AreEqual(typeof(string), data.GetType());
+            }
         }
 
         [Test]
@@ -47,7 +61,7 @@ namespace UnitTests.Controllers
                 Rating = 5
             };
             var result = testProductController.Patch(data);
-
+            
             //Act
             var okResult = result as OkResult;
 
