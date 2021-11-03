@@ -31,7 +31,6 @@ namespace UnitTests.Pages.Company.Delete
             pageModel.OnGet("111112");
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
         }
         #endregion OnGet
@@ -51,27 +50,12 @@ namespace UnitTests.Pages.Company.Delete
             var result = pageModel.OnPost() as RedirectToPageResult;
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, result.PageName.Contains("Index"));
 
             // Confirm the item is deleted
             Assert.AreEqual(null, TestHelper.CompanyService.GetAllData().FirstOrDefault(m => m.Id.Equals(pageModel.Company.Id)));
         }
 
-        [Test]
-        public void OnPost_InValid_Model_NotValid_Return_Page()
-        {
-            // Arrange
-
-            // Force an invalid error state
-            pageModel.ModelState.AddModelError("bogus", "bogus error");
-
-            // Act
-            var result = pageModel.OnPost() as ActionResult;
-
-            // Assert
-            Assert.AreEqual(false, pageModel.ModelState.IsValid);
-        }
         #endregion OnPost
     }
 }
