@@ -24,6 +24,7 @@ namespace UnitTests.Pages.Company
         #endregion TestSetup
 
         #region OnGet
+        // Testing If on get the it is returnig all the comapny names
         [Test]
         public void OnGet_Valid_Should_Return_Companies()
         {

@@ -26,6 +26,7 @@ namespace UnitTests.Controllers
         #endregion
 
         [Test]
+        // Testing If on get the it is returnig all the comapny names
         public void Get_Valid_Should_Return_List_Of_Companies()
         {
             //Arrange
