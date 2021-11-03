@@ -29,6 +29,7 @@ namespace UnitTests.Pages.Privacy
 
         #region OnGet
         [Test]
+        // Test case to validate that on valid activity a valid RequestId is returned
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
