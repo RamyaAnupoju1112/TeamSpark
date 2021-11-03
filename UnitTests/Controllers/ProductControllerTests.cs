@@ -37,5 +37,22 @@ namespace UnitTests.Controllers
             Assert.AreEqual(typeof(List<ProductModel>), data.GetType());
         }
 
+        [Test]
+        public void Patch_Valid_Should_Return_Ok()
+        {
+            //Arrange
+            var data = new RatingRequest
+            {
+                ProductId = "jenlooper-cactus",
+                Rating = 5
+            };
+            var result = testProductController.Patch(data);
+
+            //Act
+            var okResult = result as OkResult;
+
+            //Assert
+            Assert.AreEqual(200, okResult.StatusCode);
+        }
     }
 }
