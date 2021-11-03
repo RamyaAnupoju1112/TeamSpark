@@ -31,13 +31,18 @@ namespace UnitTests.Pages.Company.Index
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
-
+            pageModel.Search = "Amazon";
             // Act
             pageModel.OnGet();
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, pageModel.Companies.ToList().Any());
+        }
+
+        public void test()
+        {
+            //
         }
         #endregion OnGet
     }
