@@ -26,6 +26,7 @@ namespace UnitTests.Pages.Product.Delete
 
         #region OnGet
         [Test]
+        //Testing onGet valid should return all products
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -41,6 +42,7 @@ namespace UnitTests.Pages.Product.Delete
 
         #region OnPost
         [Test]
+        //Testing OnPost valid should return all products
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
@@ -61,6 +63,7 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(null, TestHelper.ProductService.GetAllData().FirstOrDefault(m=>m.Id.Equals(pageModel.Product.Id)));
         }
 
+        //Testing OnPost Invalid model not valid should return page
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
