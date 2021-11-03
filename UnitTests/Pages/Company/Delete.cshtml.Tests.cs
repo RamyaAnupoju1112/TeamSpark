@@ -22,18 +22,18 @@ namespace UnitTests.Pages.Company.Delete
         #endregion TestSetup
 
         #region OnGet
-        /*[Test]
-        public void OnGet_Valid_Should_Return_Products()
+        [Test]
+        public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
 
             // Act
-            pageModel.OnGet("selinazawacki-shirt");
+            pageModel.OnGet("111112");
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
-        }*/
+        }
         #endregion OnGet
 
         #region OnPost
