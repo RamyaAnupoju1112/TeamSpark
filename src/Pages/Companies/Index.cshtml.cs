@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         // Collection of the Data
         public IEnumerable<CompanyModel> Companies { get; private set; }
         [BindProperty(SupportsGet = true)]
-        public string Search { get; }
+        public string Search { get; set; }
         /// <summary>
         /// REST OnGet, return all data
         /// </summary>
