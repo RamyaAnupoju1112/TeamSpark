@@ -14,7 +14,6 @@ namespace ContosoCrafts.WebSite.Controllers
     /// <summary>
     /// Companies controller is used to control the CRUDi actions to be performed for companies.
     /// </summary>
-   
     public class CompaniesController : Controller
     {
         
