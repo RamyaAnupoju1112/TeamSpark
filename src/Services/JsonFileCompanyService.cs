@@ -45,7 +45,7 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return companies;
             }
-            return companies.Where(e => e.Name.Contains(Search));
+            return companies.Where(e => e.Name.ToLowerInvariant().Contains(Search.ToLowerInvariant()));
         }
 
         /// <summary>
