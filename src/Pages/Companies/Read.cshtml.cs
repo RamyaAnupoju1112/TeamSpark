@@ -7,11 +7,13 @@ namespace ContosoCrafts.WebSite.Pages.Companies
 {
     public class ReadModel : PageModel
     {
+
         /// Defualt Construtor
         public ReadModel(JsonFileCompanyService companyService)
         {
             CompanyService = companyService;
         }
+
         /// Data to show
         public CompanyModel Company { get; set; }
 
