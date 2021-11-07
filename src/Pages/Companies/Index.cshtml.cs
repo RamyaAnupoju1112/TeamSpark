@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -25,12 +23,14 @@ namespace ContosoCrafts.WebSite.Pages.Companies
 
         // Data Service
         public JsonFileCompanyService CompanyService { get; }
+
         // Collection of the Data
         public IEnumerable<CompanyModel> Companies { get; private set; }
-        
+
         [BindProperty(SupportsGet = true)]
         [RegularExpression(@"^[a-z A-Z]+$", ErrorMessage = "Please enter a valid company name")]
         public string Search { get; set; }
+
         /// <summary>
         /// REST OnGet, return all data
         /// </summary>
