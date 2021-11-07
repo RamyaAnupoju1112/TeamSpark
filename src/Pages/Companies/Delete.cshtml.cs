@@ -1,18 +1,17 @@
 using System.Linq;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-
 namespace ContosoCrafts.WebSite.Pages.Companies
 {
+
     /// <summary>
     /// Manage the Delete of the data for a single record
     /// </summary>
     public class DeleteModel : PageModel
     {
+
         // Data middletier
         public JsonFileCompanyService CompanyService { get; }
 
@@ -23,7 +22,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// <param name="productService"></param>
         public DeleteModel(JsonFileCompanyService companyService)
         {
-           CompanyService = companyService;
+            CompanyService = companyService;
         }
 
         // The data to show, bind to it for the post
@@ -37,7 +36,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// <param name="id"></param>
         public void OnGet(string id)
         {
-            Company  = CompanyService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            Company = CompanyService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
         /// <summary>
@@ -50,8 +49,10 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         public IActionResult OnPost()
         {
             var company = CompanyService.DeleteData(Company.Id);
-            
+
             return RedirectToPage("./Index");
         }
+
     }
+
 }
