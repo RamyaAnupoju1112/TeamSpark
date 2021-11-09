@@ -53,7 +53,6 @@ namespace ContosoCrafts.WebSite.Services
         /// After create the user can update to set values
         /// </summary>
         /// <returns></returns>
-
         public CompanyModel CreateData()
         {
             var data = new CompanyModel()
@@ -105,6 +104,7 @@ namespace ContosoCrafts.WebSite.Services
 
             return data;
         }
+
         private void SaveData(IEnumerable<CompanyModel> companies)
         {
 
@@ -120,6 +120,5 @@ namespace ContosoCrafts.WebSite.Services
                 );
             }
         }
-
     }
 }
