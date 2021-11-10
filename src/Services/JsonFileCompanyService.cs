@@ -1,9 +1,11 @@
 ﻿using ContosoCrafts.WebSite.Models;
 using Microsoft.AspNetCore.Hosting;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Services
 {
@@ -39,11 +41,33 @@ namespace ContosoCrafts.WebSite.Services
         public IEnumerable<CompanyModel> SearchCompany(string Search)
         {
             var companies = GetAllData();
-            if(string.IsNullOrEmpty(Search))
+            if (string.IsNullOrEmpty(Search))
             {
                 return companies;
             }
             return companies.Where(e => e.Name.ToLowerInvariant().Contains(Search.ToLowerInvariant()));
+        }
+
+        /// <summary>
+        /// REST call to sort data which is fetched
+        /// </summary>
+        /// <param name="Sort"></param>
+        /// <returns> Sorted list of companies</returns>
+        public IEnumerable<CompanyModel> SortCompany(String sortOrder)
+        {
+            var companies = GetAllData();
+            if (sortOrder == "ASC")
+            {
+                var CompaniesList = companies.OrderBy(e => e.Name);
+                return CompaniesList;
+            }
+            else
+            {
+                var CompaniesList = companies.OrderByDescending(e => e.Name);
+                return CompaniesList;
+            }
+
+
         }
 
         /// <summary>
