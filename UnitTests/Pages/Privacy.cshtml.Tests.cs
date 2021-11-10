@@ -8,6 +8,9 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Privacy
 {
+    /// <summary>
+    /// Class that has unit test cases related to Privacy page
+    /// </summary>
     public class PrivacyTests
     {
         #region TestSetup
@@ -27,9 +30,11 @@ namespace UnitTests.Pages.Privacy
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Test case to validate that on valid activity a valid RequestId is returned
+        /// </summary>
         #region OnGet
         [Test]
-        // Test case to validate that on valid activity a valid RequestId is returned
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
