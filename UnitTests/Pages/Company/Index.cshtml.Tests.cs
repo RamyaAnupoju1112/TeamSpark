@@ -32,6 +32,7 @@ namespace UnitTests.Pages.Company.Index
         {
             // Arrange
             pageModel.Search = "Amazon";
+
             // Act
             pageModel.OnGet();
 
