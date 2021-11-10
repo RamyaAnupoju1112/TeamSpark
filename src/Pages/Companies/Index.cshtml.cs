@@ -43,11 +43,17 @@ namespace ContosoCrafts.WebSite.Pages.Companies
             Companies = CompanyService.SearchCompany(Search);
         }
 
+        /// <summary>
+        /// REST OnPost, sort all data in ascending order
+        /// </summary>
         public void OnPostSortAsc(string SortOrder)
         {
             Companies = CompanyService.SortCompany("ASC");
         }
 
+        /// <summary>
+        /// REST OnPost, sort all data in descending order
+        /// </summary>
         public void OnPostSortDesc(string SortOrder)
         {
             Companies = CompanyService.SortCompany("DESC");
