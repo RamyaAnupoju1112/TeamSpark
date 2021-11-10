@@ -110,6 +110,24 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(4, dataNewList.Ratings.Last());
         }
         #endregion AddRating
+
+        [Test]
+        public void UpdateData_When_Invalid_Product_Updated_Returns_Null()
+        {
+            //Arrange
+            var data = new ProductModel
+            {
+                Id = "testId",
+                Description = "testDescription",
+                Title = "testTitle"
+            };
+
+            //Act
+            var prod = TestHelper.ProductService.UpdateData(data);
+
+            //Assert
+            Assert.AreEqual(null, prod);
+        }
     }
 
     
