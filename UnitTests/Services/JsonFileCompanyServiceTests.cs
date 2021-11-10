@@ -3,10 +3,12 @@ using System.Linq;
 
 namespace UnitTests.Services
 {
+    /// <summary>
+    /// Class that has unit test cases to JsonFileCompanyService.cs file
+    /// </summary>
     public class JsonFileCompanyServiceTests
     {
         #region TestSetup
-
         [SetUp]
         public void TestInitialize()
         {
@@ -14,6 +16,9 @@ namespace UnitTests.Services
 
         #endregion TestSetup
 
+        /// <summary>
+        ///  Empty search string should return list of companies
+        /// </summary>
         [Test]
         public void SearchCompany_Empty_Search_String_Returns_Companies_List()
         {
