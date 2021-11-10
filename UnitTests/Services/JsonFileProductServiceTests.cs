@@ -68,6 +68,21 @@ namespace UnitTests.Pages.Product.AddRating
             // Assert
             Assert.AreEqual(false, result);
         }
+
+        [Test]
+        public void AddRating_Valid_Product_InValid_Rating_Less_Than_Zero_Valid_Should_Return_False()
+        {
+            // Arrange
+
+            // Get the First data item
+            var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, -1);
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
         #endregion AddRating
 
     }
