@@ -42,5 +42,33 @@ namespace UnitTests.Pages.Company.Index
         }
 
         #endregion OnGet
+
+        [Test]
+        public void OnPostSortAsc_Valid_Should_Return_Companies()
+        {
+            // Arrange
+            pageModel.Sort = "Asc";
+
+            // Act
+            pageModel.OnPostSortAsc(pageModel.Sort);
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, pageModel.Companies.ToList().Any());
+        }
+
+        [Test]
+        public void OnPostSortDesc_Valid_Should_Return_Companies()
+        {
+            // Arrange
+            pageModel.Sort = "Desc";
+
+            // Act
+            pageModel.OnPostSortAsc(pageModel.Sort);
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, pageModel.Companies.ToList().Any());
+        }
     }
 }
