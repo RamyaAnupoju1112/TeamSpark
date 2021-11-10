@@ -70,5 +70,6 @@ namespace UnitTests.Pages.Company.Index
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, pageModel.Companies.ToList().Any());
         }
+
     }
 }
