@@ -83,7 +83,34 @@ namespace UnitTests.Pages.Product.AddRating
             // Assert
             Assert.AreEqual(false, result);
         }
-        #endregion AddRating
 
+        [Test]
+        public void AddRating_When_Invalid_ProductId_Given_Return_False()
+        {
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.AddRating("jenlooper-test12345", 4);
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void AddRating_If_No_Existing_Rating_There_Should_Be_Only_New_Rating()
+        {
+            // Arrange
+            var result = TestHelper.ProductService.AddRating("selinazawacki-soi-pins", 4);
+
+            // Act
+            var dataNewList = TestHelper.ProductService.GetAllData().Where(x => x.Id == "selinazawacki-soi-pins").FirstOrDefault();
+
+            // Assert
+            Assert.AreEqual(1, dataNewList.Ratings.Length);
+            Assert.AreEqual(4, dataNewList.Ratings.Last());
+        }
+        #endregion AddRating
     }
+
+    
 }
