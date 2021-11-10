@@ -10,7 +10,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
 {
     public class ReadModel : PageModel
     {
-        // Data middletier
+        /// <summary>
+        /// Data Middle tier (services)
+        /// </summary>
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
