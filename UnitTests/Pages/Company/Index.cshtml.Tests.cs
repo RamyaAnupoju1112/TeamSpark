@@ -64,7 +64,7 @@ namespace UnitTests.Pages.Company.Index
             pageModel.Sort = "Desc";
 
             // Act
-            pageModel.OnPostSortAsc(pageModel.Sort);
+            pageModel.OnPostSortDesc(pageModel.Sort);
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
