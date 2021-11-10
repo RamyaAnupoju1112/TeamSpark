@@ -21,7 +21,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // Data Service
+        /// <summary>
+        /// Data Middle tier (services)
+        /// </summary>
         public JsonFileProductService ProductService { get; }
         
         // Collection of the Data
