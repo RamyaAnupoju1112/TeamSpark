@@ -13,7 +13,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class DeleteModel : PageModel
     {
-        // Data middletier
+        /// <summary>
+        /// Data Middle tier (services)
+        /// </summary>
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
