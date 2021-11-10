@@ -40,10 +40,6 @@ namespace UnitTests.Pages.Company.Index
             Assert.AreEqual(true, pageModel.Companies.ToList().Any());
         }
 
-        public void test()
-        {
-            //
-        }
         #endregion OnGet
     }
 }
