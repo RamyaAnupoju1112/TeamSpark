@@ -6,7 +6,10 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-    //  Using ResponseCache attribute to set response caching headers.
+    /// <summary>
+    /// Using ResponseCache attribute to set response caching headers.
+    /// Class is used to handle operations related to Errors
+    /// </summary>
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class ErrorModel : PageModel
     {
@@ -24,7 +27,9 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
         }
 
-        // REST Get request
+        /// <summary>
+        /// REST Get request
+        /// </summary>
         public void OnGet()
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
