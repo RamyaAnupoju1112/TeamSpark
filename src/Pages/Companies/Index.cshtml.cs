@@ -16,6 +16,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// Default Constructor
         /// </summary>
         /// <param name="companyService"></param>
+
         public IndexModel(JsonFileCompanyService companyService)
         {
             CompanyService = companyService;
@@ -26,10 +27,13 @@ namespace ContosoCrafts.WebSite.Pages.Companies
 
         // Collection of the Data
         public IEnumerable<CompanyModel> Companies { get; private set; }
-
         [BindProperty(SupportsGet = true)]
         [RegularExpression(@"^[a-z A-Z]+$", ErrorMessage = "Please enter a valid company name")]
+
+        //public IEnumerable<CompanyModel> CompaniesList { get; private set; }
+
         public string Search { get; set; }
+        public string Sort { get; set; } = "ASC";
 
         /// <summary>
         /// REST OnGet, return all data
@@ -37,6 +41,16 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         public void OnGet()
         {
             Companies = CompanyService.SearchCompany(Search);
+        }
+
+        public void OnPostSortAsc(string SortOrder)
+        {
+            Companies = CompanyService.SortCompany("ASC");
+        }
+
+        public void OnPostSortDesc(string SortOrder)
+        {
+            Companies = CompanyService.SortCompany("DESC");
         }
     }
 }
