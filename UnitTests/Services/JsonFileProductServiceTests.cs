@@ -35,21 +35,6 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         [Test]
-        
-        public void AddRating_InValid_()
-        {
-            // Arrange
-
-            // Act
-            //var result = TestHelper.ProductService.AddRating(null, 1);
-
-            // Assert
-            //Assert.AreEqual(false, result);
-        }
-
-        // ....
-
-        [Test]
         //Testing AddRating for valid product and valid rating should return true
         public void AddRating_Valid_Product_Valid_Rating_Valid_Should_Return_True()
         {
@@ -67,6 +52,21 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(true, result);
             Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
+        }
+
+        [Test]
+        public void AddRating_Valid_Product_InValid_Rating_Valid_Should_Return_False()
+        {
+            // Arrange
+
+            // Get the First data item
+            var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, 6);
+
+            // Assert
+            Assert.AreEqual(false, result);
         }
         #endregion AddRating
 
