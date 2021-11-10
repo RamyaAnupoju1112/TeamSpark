@@ -9,22 +9,33 @@ using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Services
 {
+    /// <summary>
+    /// Service class writte to handle operations related to company model
+    /// </summary>
     public class JsonFileCompanyService
     {
-        // Setting the the web hosting environment.
+        /// <summary>
+        /// Setting the the web hosting environment.
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileCompanyService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        //assigned IWebHostEnvironment to the public property
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        // gets the combined path of JSON file
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "companies.json"); }
         }
 
-        // REST call to read all data from the JSON files
+        /// <summary>
+        /// REST call to read all data from the JSON files
+        /// </summary>
+        /// <returns>complete data of companies</returns>
         public IEnumerable<CompanyModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
@@ -37,7 +48,11 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-        // REST call to search data which is fetched
+        /// <summary>
+        /// REST call to search data which is fetched
+        /// </summary>
+        /// <param name="Search"></param>
+        /// <returns>complete list of companies</returns>
         public IEnumerable<CompanyModel> SearchCompany(string Search)
         {
             var companies = GetAllData();
@@ -94,6 +109,11 @@ namespace ContosoCrafts.WebSite.Services
             return data;
         }
 
+        /// <summary>
+        /// REST call to update company data
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public CompanyModel UpdateData(CompanyModel data)
         {
             var companies = GetAllData();
@@ -114,6 +134,11 @@ namespace ContosoCrafts.WebSite.Services
             return companyData;
         }
 
+        /// <summary>
+        /// DeleteData is a REST call to delete data
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public CompanyModel DeleteData(string id)
         {
             // Get the current set, and append the new record to it
@@ -127,6 +152,10 @@ namespace ContosoCrafts.WebSite.Services
             return data;
         }
 
+        /// <summary>
+        /// SaveData is a method to save data to the JSON file
+        /// </summary>
+        /// <param name="companies"></param>
         private void SaveData(IEnumerable<CompanyModel> companies)
         {
 
