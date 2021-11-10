@@ -5,6 +5,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
+    /// <summary>
+    /// Products controller is used to control the CRUDi actions to be performed for products.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class ProductsController : ControllerBase
@@ -16,12 +19,21 @@ namespace ContosoCrafts.WebSite.Controllers
 
         public JsonFileProductService ProductService { get; }
 
+        /// <summary>
+        /// GetAllData method is used to Get the list of all the products, it parses the JSON file and converts into product model list
+        /// </summary>
+        /// <returns>List of Product Model</returns>
         [HttpGet]
         public IEnumerable<ProductModel> Get()
         {
             return ProductService.GetAllData();
         }
 
+        /// <summary>
+        /// AddRatings method is used for ratings
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPatch]
         public ActionResult Patch([FromBody] RatingRequest request)
         {
@@ -30,9 +42,15 @@ namespace ContosoCrafts.WebSite.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Ratings class with ProductId and Rating
+        /// </summary>
         public class RatingRequest
         {
+            // get or set ProductId
             public string ProductId { get; set; }
+
+            //get or set Rating
             public int Rating { get; set; }
         }
     }
