@@ -16,7 +16,10 @@ namespace ContosoCrafts.WebSite.Controllers
     /// </summary>
     public class CompaniesController : Controller
     {
-        
+        /// <summary>
+        /// Constructor for Companiescontroller
+        /// </summary>
+        /// <param name="companyService"></param>
         public CompaniesController(JsonFileCompanyService companyService)
         {
             CompanyService = companyService;
@@ -28,7 +31,6 @@ namespace ContosoCrafts.WebSite.Controllers
         /// GetAllData method is used to Get the list of all the companies, it parses the JSON file and converts into company model list
         /// </summary>
         /// <returns>List of Company Model</returns>
-        
         [HttpGet]
         public IEnumerable<CompanyModel> Get()
         {
