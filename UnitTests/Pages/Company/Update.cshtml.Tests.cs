@@ -37,6 +37,19 @@ namespace UnitTests.Pages.Company.Update
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
         }
+        
+        [Test]
+        //Testing OnGet if it redirects to Index page when a bogus id is passed
+        public void OnGet_InValid_Id_Bogus_Should_Return_Companies()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("Bogus") as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("./Index", result.PageName);
+        }
         #endregion OnGet
 
         #region OnPost
