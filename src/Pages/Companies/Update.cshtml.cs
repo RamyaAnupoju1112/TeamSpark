@@ -33,9 +33,14 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// Loads the Data
         /// </summary>
         /// <param name="id"></param>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
             Company = CompanyService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            if (Company == null)
+            {
+                return RedirectToPage("./Index");
+            }
+            return Page();
         }
 
         /// <summary>
