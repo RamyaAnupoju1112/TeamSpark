@@ -34,6 +34,19 @@ namespace UnitTests.Pages.Company.Delete
             // Assert
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
         }
+
+        //Testing if OnGet returns companies when bogus id is passed
+        [Test]
+        public void OnGet_InValid_Id_Bogus_Should_Return_Companies()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("Bogus") as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("./Index", result.PageName);
+        }
         #endregion OnGet
 
         #region OnPost
