@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Model class for Product
+    /// </summary>
     public class ProductModel
     {
         // get or set the Product ID
@@ -34,6 +37,7 @@ namespace ContosoCrafts.WebSite.Models
         [Range (-1, 100, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public int Price { get; set; }
 
+        //JsonSerializer to serialize ProductModel
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
 
