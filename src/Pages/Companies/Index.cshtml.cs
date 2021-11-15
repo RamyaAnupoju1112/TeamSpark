@@ -28,7 +28,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         // Collection of the Data
         public IEnumerable<CompanyModel> Companies { get; private set; }
         [BindProperty(SupportsGet = true)]
-        [RegularExpression(@"^[a-z A-Z]+$", ErrorMessage = "Please enter a valid company name")]
+        [RegularExpression(@"^[a-z A-Z 0-9]+$", ErrorMessage = "Please enter a valid company name")]
 
         //public IEnumerable<CompanyModel> CompaniesList { get; private set; }
 
