@@ -6,18 +6,6 @@
     "JobRoleName": "Software Developer"
   },
   {
-    "Id": "111113",
-    "Name": "Amazon",
-    "H1BSupport": "True",
-    "JobRoleName": "Marketing Manager"
-  },
-  {
-    "Id": "111113",
-    "Name": "Amazon",
-    "H1BSupport": "True",
-    "JobRoleName": "Marketing Manager"
-  },
-  {
     "Id": "111114",
     "Name": "Google",
     "H1BSupport": "True",
@@ -52,6 +40,17 @@
     "Name": "Expedia",
     "H1BSupport": "False",
     "JobRoleName": "Finance Analyst"
+  },
+  {
+    "Id": "db2b3dd5-f555-44e7-be59-070d4f045b9a",
+    "Name": "Docusign1",
+    "H1BSupport": "True",
+    "JobRoleName": "Finance Analyst"
+  },
+  {
+    "Id": "dcafa6ef-ed60-4105-9a44-f34a51e12480",
+    "Name": "Amazon",
+    "H1BSupport": "True",
+    "JobRoleName": "Software Developer"
   }
-
 ]
