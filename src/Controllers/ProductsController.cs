@@ -17,6 +17,7 @@ namespace ContosoCrafts.WebSite.Controllers
             ProductService = productService;
         }
 
+        // Getter for CompanyService
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
