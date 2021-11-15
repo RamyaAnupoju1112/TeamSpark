@@ -7,7 +7,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Id { get; set; }
         // Valiating the company name to not have special characters or Null values
         [Required(ErrorMessage = "Please enter Company Name")]
-        [RegularExpression(@"^[a-z A-Z]+$", ErrorMessage = "Please enter a valid company name")]
+        [RegularExpression(@"^[a-z A-Z 0-9]+$", ErrorMessage = "Please enter a valid company name")]
         public string Name { get; set; }
 
         // Validating the input for H1B status
