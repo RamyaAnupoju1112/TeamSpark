@@ -2,6 +2,9 @@
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Model class for company
+    /// </summary>
     public class CompanyModel
     {
         public string Id { get; set; }
