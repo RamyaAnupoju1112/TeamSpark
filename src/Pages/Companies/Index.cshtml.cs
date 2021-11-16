@@ -32,7 +32,10 @@ namespace ContosoCrafts.WebSite.Pages.Companies
 
         //public IEnumerable<CompanyModel> CompaniesList { get; private set; }
 
+        //Getter and setter to Search string
         public string Search { get; set; }
+
+        //Getter and setter to sort string
         public string Sort { get; set; } = "ASC";
 
         /// <summary>
