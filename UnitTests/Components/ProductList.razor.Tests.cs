@@ -2,6 +2,8 @@ using NUnit.Framework;
 using ContosoCrafts.WebSite.Components;
 using Microsoft.Extensions.DependencyInjection;
 using ContosoCrafts.WebSite.Services;
+using Bunit;
+using System.Linq;
 
 namespace UnitTests.Components
 {
@@ -31,5 +33,33 @@ namespace UnitTests.Components
             // Assert
             Assert.AreEqual(true, result.Contains("The Quantified Cactus: An Easy Plant Soil Moisture Sensor"));
         }
+
+        #region SelectProduct
+        [Test]
+        public void SelectProduct_Valid_ID_jenlooper_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-cactus";
+
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("This project is a good learning project to get comfortable with soldering and programming an Arduino."));
+        }
+        #endregion SelectProduct
+
     }
 }
