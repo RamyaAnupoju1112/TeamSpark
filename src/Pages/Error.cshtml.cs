@@ -22,6 +22,10 @@ namespace ContosoCrafts.WebSite.Pages
         // Using Ilogger to log error messages
         private readonly ILogger<ErrorModel> _logger;
 
+        /// <summary>
+        /// logger for error model
+        /// </summary>
+        /// <param name="logger"></param>
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
