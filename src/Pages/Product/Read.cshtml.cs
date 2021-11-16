@@ -8,6 +8,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// Read page to display information related to particular product
+    /// </summary>
     public class ReadModel : PageModel
     {
         /// <summary>
