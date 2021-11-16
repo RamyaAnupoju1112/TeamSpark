@@ -178,12 +178,119 @@ namespace UnitTests.Components
         }
 
 
+        [Test]
+        public void SubmitRating_Valid_ID_Click_Stared_Should_Increment_Count_And_Leave_Star_Check_Remaining()
+        {
+            /*
+            This test tests that the SubmitRating will change the vote as well as the Star checked
+            Because the star check is a calculation of the ratings, using a record that has no stars and checking one makes it clear what was changed
 
-        
 
 
+            The test needs to open the page
+            Then open the popup on the card
+            Then record the state of the count and star check status
+            Then check a star
+            Then check again the state of the cound and star check status
+
+
+
+            */
+
+
+
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-cactus";
+
+
+
+            var page = RenderComponent<ProductList>();
+
+           
+            var buttonList = page.FindAll("Button");
+
+
+
+           
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            button.Click();
+
+
+
+           
+            var buttonMarkup = page.Markup;
+
+
+
+            
+            var starButtonList = page.FindAll("span");
+
+
+
+          
+            var preVoteCountSpan = starButtonList[1];
+            var preVoteCountString = preVoteCountSpan.OuterHtml;
+
+
+
+            
+            var starButton = starButtonList.Last(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
+
+
+
+            
+            var preStarChange = starButton.OuterHtml;
+
+            // Act
+
+
+
+           
+            starButton.Click();
+
+
+
+           
+            buttonMarkup = page.Markup;
+
+
+
+           
+            starButtonList = page.FindAll("span");
+
+
+
+          
+            var postVoteCountSpan = starButtonList[1];
+            var postVoteCountString = postVoteCountSpan.OuterHtml;
+
+
+
+            
+            starButton = starButtonList.Last(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
+
+
+
+            
+            var postStarChange = starButton.OuterHtml;
+
+            // Assert
+
+
+
+            
+            Assert.AreEqual(true, preVoteCountString.Contains("6 Votes"));
+            Assert.AreEqual(true, postVoteCountString.Contains("7 Votes"));
+            Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
+        }
 
         #endregion SubmitRating
+
+
+
+
+
 
 
 
