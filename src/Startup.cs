@@ -7,6 +7,9 @@ using Microsoft.Extensions.Hosting;
 
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// Startup class
+    /// </summary>
     public class Startup
     {
         /// <summary>
