@@ -44,19 +44,21 @@ namespace UnitTests.Components
 
             var page = RenderComponent<ProductList>();
 
-            // Find the Buttons (more info)
+            // Find All the Buttons (more info)
             var buttonList = page.FindAll("Button");
 
             // Find the one that matches the ID looking for and click it
             var button = buttonList.First(m => m.OuterHtml.Contains(id));
 
             // Act
+            // click on MoreInfo button
             button.Click();
 
             // Get the markup to use for the assert
             var pageMarkup = page.Markup;
 
             // Assert
+            // return true if it contains the following description
             Assert.AreEqual(true, pageMarkup.Contains("This project is a good learning project to get comfortable with soldering and programming an Arduino."));
         }
         #endregion SelectProduct
