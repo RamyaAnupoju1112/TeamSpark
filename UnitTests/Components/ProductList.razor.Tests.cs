@@ -214,4 +214,3 @@ namespace UnitTests.Components
         #endregion SubmitRating
     }
 }
-
