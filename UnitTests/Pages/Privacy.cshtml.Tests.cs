@@ -13,9 +13,13 @@ namespace UnitTests.Pages.Privacy
     /// </summary>
     public class PrivacyTests
     {
+        // creating an instance
         #region TestSetup
         public static PrivacyModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
