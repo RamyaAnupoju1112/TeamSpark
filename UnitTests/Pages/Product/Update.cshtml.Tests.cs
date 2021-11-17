@@ -8,11 +8,18 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.Update
 {
+    /// <summary>
+    /// Class containing unit test cases to Update page
+    /// </summary>
     public class UpdateTests
     {
+        // creating an instance
         #region TestSetup
         public static UpdateModel pageModel;
 
+        /// <summary>
+        /// Test initialize
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -23,9 +30,11 @@ namespace UnitTests.Pages.Product.Update
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing If on GET the it is returnig all the product names
+        /// </summary>
         #region OnGet
         [Test]
-        // Testing If on GET the it is returnig all the product names
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -39,9 +48,11 @@ namespace UnitTests.Pages.Product.Update
         }
         #endregion OnGet
 
+        /// <summary>
+        ///  Testing If on POST the it is returnig all the product names
+        /// </summary>
         #region OnPost
         [Test]
-        // Testing If on POST the it is returnig all the product names
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
@@ -62,6 +73,9 @@ namespace UnitTests.Pages.Product.Update
             Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
+        /// <summary>
+        /// Testing onPost invalid should return bogus
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
