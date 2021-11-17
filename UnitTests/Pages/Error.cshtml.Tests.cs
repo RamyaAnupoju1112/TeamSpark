@@ -10,11 +10,18 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Error
 {
+    /// <summary>
+    /// Class containing unit test cases to Error page
+    /// </summary>
     public class ErrorTests
     {
+        // creating an instance
         #region TestSetup
         public static ErrorModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
