@@ -7,11 +7,18 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Company.Update
 {
+    /// <summary>
+    /// Class containing unit test cases for Update page
+    /// </summary>
     public class UpdateTests
     {
+        //Creating instance of the model
         #region TestSetup
         public static UpdateModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -22,10 +29,11 @@ namespace UnitTests.Pages.Company.Update
 
         #endregion TestSetup
 
-        //unused test case
+        /// <summary>
+        /// Testing If on GET the it is returnig all the comapany names
+        /// </summary>
         #region OnGet
         [Test]
-        // Testing If on GET the it is returnig all the comapany names
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -37,9 +45,11 @@ namespace UnitTests.Pages.Company.Update
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
         }
-        
+
+        /// <summary>
+        /// Testing OnGet if it redirects to Index page when a bogus id is passed
+        /// </summary>
         [Test]
-        //Testing OnGet if it redirects to Index page when a bogus id is passed
         public void OnGet_InValid_Id_Bogus_Should_Return_Companies()
         {
             // Arrange
@@ -52,9 +62,11 @@ namespace UnitTests.Pages.Company.Update
         }
         #endregion OnGet
 
+        /// <summary>
+        /// Testing If on POST the it is returnig all the company names
+        /// </summary>
         #region OnPost
         [Test]
-        // Testing If on POST the it is returnig all the company names
         public void OnPost_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -73,6 +85,9 @@ namespace UnitTests.Pages.Company.Update
             Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
+        /// <summary>
+        /// Onpost invalid model should return error page
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
