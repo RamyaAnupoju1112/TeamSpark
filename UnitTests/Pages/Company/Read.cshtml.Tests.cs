@@ -9,10 +9,17 @@ using System.Threading.Tasks;
 
 namespace UnitTests.Pages.Company
 {
+    /// <summary>
+    /// Class containing unit test cases of Read page
+    /// </summary>
     public class ReadTests
     {
+        //Creating an instance of the model
         public static ReadModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -22,8 +29,10 @@ namespace UnitTests.Pages.Company
         }
 
         #region OnGet
+        /// <summary>
+        /// Testing onget valid should return all Companies
+        /// </summary>
         [Test]
-        //Testing onget valid should return all Companies
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -36,7 +45,9 @@ namespace UnitTests.Pages.Company
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
         }
 
-        //Testing OnGet if it redirects to Index page when a bogus id is passed
+        /// <summary>
+        /// Testing OnGet if it redirects to Index page when a bogus id is passed
+        /// </summary>
         [Test]
         public void OnGet_InValid_Id_Bogus_Should_Return_Companies()
         {
