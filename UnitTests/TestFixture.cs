@@ -4,6 +4,9 @@ using NUnit.Framework;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// Class to TestFixture
+    /// </summary>
     [SetUpFixture]
     public class TestFixture
     {
@@ -13,10 +16,12 @@ namespace UnitTests
         // Path to the data folder for the content
         public static string DataContentRootPath = "./data/";
 
+        /// <summary>
+        /// Run this code once when the test harness starts up.
+        /// </summary>
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            // Run this code once when the test harness starts up.
 
             // This will copy over the latest version of the database files
 
@@ -51,6 +56,9 @@ namespace UnitTests
             }
         }
 
+        /// <summary>
+        /// Run after any tests
+        /// </summary>
         [OneTimeTearDown]
         public void RunAfterAnyTests()
         {
