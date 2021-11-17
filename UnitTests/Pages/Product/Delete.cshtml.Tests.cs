@@ -9,11 +9,20 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.Delete
 {
+    /// <summary>
+    /// Class containing unit test cases for Delete page
+    /// </summary>
     public class DeleteTests
     {
+        /// <summary>
+        /// Creating instance to the model
+        /// </summary>
         #region TestSetup
         public static DeleteModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -24,9 +33,11 @@ namespace UnitTests.Pages.Product.Delete
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing onGet valid should return all products
+        /// </summary>
         #region OnGet
         [Test]
-        //Testing onGet valid should return all products
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -40,9 +51,11 @@ namespace UnitTests.Pages.Product.Delete
         }
         #endregion OnGet
 
+        /// <summary>
+        /// Testing OnPost valid should return all products
+        /// </summary>
         #region OnPost
         [Test]
-        //Testing OnPost valid should return all products
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
@@ -63,7 +76,9 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(null, TestHelper.ProductService.GetAllData().FirstOrDefault(m=>m.Id.Equals(pageModel.Product.Id)));
         }
 
-        //Testing OnPost Invalid model not valid should return page
+        /// <summary>
+        /// Testing OnPost Invalid model not valid should return page
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
