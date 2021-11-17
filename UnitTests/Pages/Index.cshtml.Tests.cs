@@ -15,7 +15,7 @@ namespace UnitTests.Pages.Index
     /// </summary>
     public class IndexTests
     {
-        //IndexModel object
+        // creating an instance
         #region TestSetup
 
         public static IndexModel pageModel;
