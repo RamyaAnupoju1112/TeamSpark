@@ -8,6 +8,9 @@ namespace UnitTests.Services
     /// </summary>
     public class JsonFileCompanyServiceTests
     {
+        /// <summary>
+        /// Test Initialize
+        /// </summary>
         #region TestSetup
         [SetUp]
         public void TestInitialize()
@@ -20,7 +23,7 @@ namespace UnitTests.Services
         ///  Empty search string should return list of companies
         /// </summary>
         [Test]
-        public void SearchCompany_Empty_Search_String_Returns_Companies_List()
+        public void SearchCompany_Valid_Empty_Search_String_Returns_Companies_List()
         {
             //Arrange
             var emptyString = "";
