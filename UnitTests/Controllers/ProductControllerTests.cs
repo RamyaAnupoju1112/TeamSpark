@@ -8,10 +8,17 @@ using static ContosoCrafts.WebSite.Controllers.ProductsController;
 
 namespace UnitTests.Controllers
 {
+    /// <summary>
+    /// Class containing unit test cases to ProductController
+    /// </summary>
     public class ProductControllerTests
     {
+        //Creating and instance
         public static ProductsController testProductController;
 
+        /// <summary>
+        /// Test initialize
+        /// </summary>
         #region TestSetup
         [SetUp]
         public void TestInitialize()
@@ -20,6 +27,9 @@ namespace UnitTests.Controllers
         }
         #endregion
 
+        /// <summary>
+        /// Testing if get is valid should return products
+        /// </summary>
         [Test]
         public void Get_Valid_Should_Return_List_Of_Products()
         {
@@ -32,6 +42,9 @@ namespace UnitTests.Controllers
             Assert.AreEqual(typeof(List<ProductModel>), data.GetType());
         }
 
+        /// <summary>
+        /// Testing get valid tostring should return string
+        /// </summary>
         [Test]
         public void Get_Valid_ToString_Should_Return_String()
         {
@@ -46,6 +59,9 @@ namespace UnitTests.Controllers
             }
         }
 
+        /// <summary>
+        /// Testing patch valid should return ok
+        /// </summary>
         [Test]
         public void Patch_Valid_Should_Return_Ok()
         {
