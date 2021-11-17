@@ -35,14 +35,14 @@ namespace ContosoCrafts.WebSite.Pages.Companies
 
         //Getter and setter to Search string
         public string Search { get; set; }
-   
+        public string Sort { get; set; }
+
         /// <summary>
         /// REST OnGet, return all data
         /// </summary>
         public void OnGet()
         {
             Companies = CompanyService.SearchCompany(Search);
-
         }
 
         /// <summary>
