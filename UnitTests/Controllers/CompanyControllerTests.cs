@@ -6,10 +6,17 @@ using System.Linq;
 
 namespace UnitTests.Controllers
 {
+    /// <summary>
+    /// Class containing unit test cases to CompanyController
+    /// </summary>
     public class CompaniesControllerTests
     {
+        //Creating an instance
         public static CompaniesController testCompanyController;
 
+        /// <summary>
+        /// Test initialize
+        /// </summary>
         #region TestSetup
         [SetUp]
         public void TestInitialize()
@@ -18,8 +25,10 @@ namespace UnitTests.Controllers
         }
         #endregion
 
+        /// <summary>
+        /// Testing If on get the it is returnig all the comapny names
+        /// </summary>
         [Test]
-        // Testing If on get the it is returnig all the comapny names
         public void Get_Valid_Should_Return_List_Of_Companies()
         {
             //Arrange
