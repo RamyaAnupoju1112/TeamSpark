@@ -4,6 +4,7 @@ using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Pages.Companies
 {
@@ -34,16 +35,14 @@ namespace ContosoCrafts.WebSite.Pages.Companies
 
         //Getter and setter to Search string
         public string Search { get; set; }
-
-        //Getter and setter to sort string
-        public string Sort { get; set; } = "ASC";
-
+   
         /// <summary>
         /// REST OnGet, return all data
         /// </summary>
         public void OnGet()
         {
             Companies = CompanyService.SearchCompany(Search);
+
         }
 
         /// <summary>
