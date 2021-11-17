@@ -7,8 +7,14 @@ using System.Linq;
 
 namespace UnitTests.Components
 {
+    /// <summary>
+    /// Class containing unit test cases to ProductList.razor
+    /// </summary>
     public class ProductListTests : BunitTestContext
     {
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         #region TestSetup
 
         [SetUp]
@@ -18,6 +24,9 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        /// <summary>
+        /// ProductList default should retuen content
+        /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
@@ -34,6 +43,9 @@ namespace UnitTests.Components
             Assert.AreEqual(true, result.Contains("The Quantified Cactus: An Easy Plant Soil Moisture Sensor"));
         }
 
+        /// <summary>
+        /// Select product valid id jenlooper should return content
+        /// </summary>
         #region SelectProduct
         [Test]
         public void SelectProduct_Valid_ID_jenlooper_Should_Return_Content()
@@ -66,7 +78,9 @@ namespace UnitTests.Components
         #region SubmitRating
 
 
-
+        /// <summary>
+        /// SubmitRating valid id click unstarted should increment count and check star
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
@@ -139,7 +153,9 @@ namespace UnitTests.Components
             Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
         }
 
-
+        /// <summary>
+        /// SubmitRating Valid ID click started should increment count and leave star check remaining
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Stared_Should_Increment_Count_And_Leave_Star_Check_Remaining()
         {
