@@ -4,10 +4,15 @@ using System.Linq;
 
 namespace UnitTests.Pages.Product.AddRating
 {
+    /// <summary>
+    /// Class containing unit test cases to JsonFileProductService file
+    /// </summary>
     public class JsonFileProductServiceTests
     {
         #region TestSetup
-
+        /// <summary>
+        /// Test initialize
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -15,9 +20,11 @@ namespace UnitTests.Pages.Product.AddRating
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing to check if a invalid product null will return false
+        /// </summary>
         #region AddRating
         [Test]
-        //Testing to check if a invalid product null will return false
         public void AddRating_InValid_Product_Null_Should_Return_False()
         {
             // Arrange
@@ -29,8 +36,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// Testing AddRating for valid product and valid rating should return true
+        /// </summary>
         [Test]
-        //Testing AddRating for valid product and valid rating should return true
         public void AddRating_Valid_Product_Valid_Rating_Valid_Should_Return_True()
         {
             // Arrange
@@ -49,6 +58,9 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
 
+        /// <summary>
+        /// Testing add rating if valid and invalid rating should return false
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_InValid_Rating_Valid_Should_Return_False()
         {
@@ -64,6 +76,9 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// Testing valid product invalid rating and rating less than zero should return false
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_InValid_Rating_Less_Than_Zero_Valid_Should_Return_False()
         {
@@ -79,8 +94,11 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// Testing add rating invalid product id should return false
+        /// </summary>
         [Test]
-        public void AddRating_When_Invalid_ProductId_Given_Return_False()
+        public void AddRating_Invalid_ProductId_Given_Return_False()
         {
             // Arrange
 
@@ -91,8 +109,11 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// Add rating if no exsisting rating there should be only new rating
+        /// </summary>
         [Test]
-        public void AddRating_If_No_Existing_Rating_There_Should_Be_Only_New_Rating()
+        public void AddRating_valid_If_No_Existing_Rating_There_Should_Be_Only_New_Rating()
         {
             // Arrange
             var result = TestHelper.ProductService.AddRating("selinazawacki-soi-pins", 4);
@@ -106,8 +127,11 @@ namespace UnitTests.Pages.Product.AddRating
         }
         #endregion AddRating
 
+        /// <summary>
+        /// Testing invalid product unpated returns null
+        /// </summary>
         [Test]
-        public void UpdateData_When_Invalid_Product_Updated_Returns_Null()
+        public void UpdateData_Invalid_Product_Updated_Returns_Null()
         {
             //Arrange
             var data = new ProductModel
