@@ -6,11 +6,20 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Company.Delete
 {
+    /// <summary>
+    /// Class containing unit test cases of Delete companies page
+    /// </summary>
     public class DeleteTests
     {
+        /// <summary>
+        /// Delete model object
+        /// </summary>
         #region TestSetup
         public static DeleteModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -22,8 +31,10 @@ namespace UnitTests.Pages.Company.Delete
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// Testing onget valid should return all companies
+        /// </summary>
         [Test]
-        //Testing onget valid should return all companies
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -35,7 +46,9 @@ namespace UnitTests.Pages.Company.Delete
             Assert.AreEqual("Microsoft", pageModel.Company.Name);
         }
 
-        //Testing if OnGet returns companies when bogus id is passed
+        /// <summary>
+        /// Testing if OnGet returns companies when bogus id is passed
+        /// </summary>
         [Test]
         public void OnGet_InValid_Id_Bogus_Should_Return_Companies()
         {
@@ -50,8 +63,10 @@ namespace UnitTests.Pages.Company.Delete
         #endregion OnGet
 
         #region OnPost
+        /// <summary>
+        /// Testing onget valid should return all products
+        /// </summary>
         [Test]
-        //Testing onget valid should return all products
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
