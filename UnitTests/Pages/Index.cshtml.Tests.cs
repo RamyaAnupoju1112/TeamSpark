@@ -15,13 +15,15 @@ namespace UnitTests.Pages.Index
     /// </summary>
     public class IndexTests
     {
-        /// <summary>
-        /// 
-        /// </summary>
+        //IndexModel object
         #region TestSetup
 
         public static IndexModel pageModel;
 
+        /// <summary>
+        /// Initializing
+        /// ILogger to write log messages
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
