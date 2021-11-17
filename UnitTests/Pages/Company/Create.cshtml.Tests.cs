@@ -8,11 +8,20 @@ using System.Threading.Tasks;
 
 namespace UnitTests.Pages.Company
 {
+    /// <summary>
+    /// Class containing unit test cases of Create page
+    /// </summary>
     public class CreateTests
     {
+        /// <summary>
+        /// CreateModel object
+        /// </summary>
         #region TestSetup
         public static CreateModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -24,7 +33,9 @@ namespace UnitTests.Pages.Company
         #endregion TestSetup
 
         #region OnGet
-        // Testing If on get the it is returnig all the comapny names
+        /// <summary>
+        /// Testing If on get the it is returnig all the comapny names
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_Companies()
         {
