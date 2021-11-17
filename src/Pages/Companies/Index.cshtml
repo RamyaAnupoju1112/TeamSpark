@@ -20,16 +20,7 @@
     <table>
         <a asp-page="create" class="btn-link">Add company</a>
         <br>
-        <td>
-            <form asp-page-handler="sortAsc" method="post">
-                <button type="submit" class="btn btn-default">A-Z</button>
-            </form>
-        </td>
-        <td>
-            <form asp-page-handler="sortDesc" method="post">
-                <button type="submit" class="btn btn-default">Z-A</button>
-            </form>
-        </td>
+        
     </table>
     <br>
 
@@ -38,8 +29,21 @@
 
             <tr>
                 <th>
-                    Name
-                </th>
+                    <table>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            <form asp-page-handler="sortAsc" method="post">
+                                <button id="down-button" type="submit"></button>
+                            </form>
+                        </th>
+                        <th>
+                            <form asp-page-handler="sortDesc" method="post">
+                                <button id="up-button" type="submit"></button>
+                            </form>
+                        </th>
+                    </table></th>
                 <th>H1B Support</th>
                 <th>Job Role</th>
             </tr>
