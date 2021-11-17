@@ -147,7 +147,5 @@ namespace UnitTests.Pages.Product.AddRating
             //Assert
             Assert.AreEqual(null, prod);
         }
-    }
-
-    
+    }  
 }
