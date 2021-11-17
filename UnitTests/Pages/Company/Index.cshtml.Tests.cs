@@ -8,13 +8,21 @@ using ContosoCrafts.WebSite.Pages.Companies;
 
 namespace UnitTests.Pages.Company.Index
 {
+    /// <summary>
+    /// Class containing unit test cases of Index page
+    /// </summary>
     public class IndexTests
     {
+        // Creating an instance
         #region TestSetup
         public static PageContext pageContext;
 
+        // Creating an instance
         public static IndexModel pageModel;
 
+        /// <summary>
+        /// Initializing test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -25,9 +33,11 @@ namespace UnitTests.Pages.Company.Index
 
         #endregion TestSetup
 
+        /// <summary>
+        /// On making a get call the request should return all the companies
+        /// </summary>
         #region OnGet
-        [Test]
-        // On making a get call the request should return all the companies
+        [Test] 
         public void OnGet_Valid_Should_Return_Companies()
         {
             // Arrange
@@ -43,6 +53,9 @@ namespace UnitTests.Pages.Company.Index
 
         #endregion OnGet
 
+        /// <summary>
+        /// Onpost of sort ascending list of companies should be returned
+        /// </summary>
         [Test]
         public void OnPostSortAsc_Valid_Should_Return_Companies()
         {
@@ -57,6 +70,9 @@ namespace UnitTests.Pages.Company.Index
             Assert.AreEqual(true, pageModel.Companies.ToList().Any());
         }
 
+        /// <summary>
+        /// On post of sort descending, list of all companies should be returned
+        /// </summary>
         [Test]
         public void OnPostSortDesc_Valid_Should_Return_Companies()
         {
