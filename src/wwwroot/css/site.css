@@ -59,6 +59,8 @@ a {
     color: #252152;
 }
 
+
+
 .btn-primary {
     color: #fff;
     background-color: #252152;
@@ -138,11 +140,15 @@ button.accept-policy {
     clear: both;
 }
 
-/*styling for navigation bar*/
-.navigation {
-    overflow: hidden;
-    background-color: #252150;
+.comapanyNameField{
+    border : none;
 }
+
+    /*styling for navigation bar*/
+    .navigation {
+        overflow: hidden;
+        background-color: #252150;
+    }
 
     .navigation a {
         float: left;
