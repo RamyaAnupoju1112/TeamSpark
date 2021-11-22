@@ -144,6 +144,12 @@ button.accept-policy {
     border : none;
 }
 
+.comapanyNameField thead th {
+    border: none;
+    border-bottom: none;
+    background: none
+}
+
 .comapanyNameField th {
     border: none;
     border-bottom: none;
