@@ -156,6 +156,10 @@ button.accept-policy {
     background: white
 }
 
+.table-bordered thead th {
+    border-bottom-width: 0px;
+}
+
     /*styling for navigation bar*/
     .navigation {
         overflow: hidden;
