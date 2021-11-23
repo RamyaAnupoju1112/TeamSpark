@@ -128,9 +128,7 @@ namespace ContosoCrafts.WebSite.Services
             companyData.Name = data.Name.Trim();
             companyData.JobRoleName = data.JobRoleName;
             companyData.H1BSupport = data.H1BSupport;
-
             SaveData(companies);
-
             return companyData;
         }
 
