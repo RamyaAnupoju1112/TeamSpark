@@ -81,8 +81,6 @@ namespace ContosoCrafts.WebSite.Services
                 var CompaniesList = companies.OrderByDescending(e => e.Name);
                 return CompaniesList;
             }
-
-
         }
 
         /// <summary>
