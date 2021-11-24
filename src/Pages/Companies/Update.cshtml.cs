@@ -47,6 +47,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
         /// Post the model back to the page
         /// The model is in the class variable Product
         /// Call the data layer to Update that data
+        /// It also checks the duplicate company and doesnt allow user to add duplicate company name
         /// Then return to the index page
         /// </summary>
         /// <returns></returns>
