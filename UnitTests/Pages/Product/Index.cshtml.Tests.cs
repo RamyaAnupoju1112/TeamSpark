@@ -1,9 +1,6 @@
 using System.Linq;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Index
@@ -32,7 +29,6 @@ namespace UnitTests.Pages.Product.Index
             {
             };
         }
-
         #endregion TestSetup
 
         /// <summary>
