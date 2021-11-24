@@ -61,7 +61,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
             var companyRequired = companies.Where(a => a.Name == Company.Name && a.JobRoleName == Company.JobRoleName)
                         .Select(b => b)
                         .FirstOrDefault();
-            if(companyRequired != null)
+            if (companyRequired != null && companyRequired.H1BSupport == Company.H1BSupport)
             {
                 CompanyService.DeleteData(Company.Id);
                 return RedirectToPage("./Index");
