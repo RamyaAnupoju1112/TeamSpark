@@ -37,9 +37,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// Loads the Data
         /// </summary>
         /// <param name="id"></param>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            if (Product == null)
+            {
+                return RedirectToPage("./Index");
+            }
+            return Page();
         }
 
         /// <summary>
