@@ -1,11 +1,7 @@
 using System.Diagnostics;
-
 using Microsoft.Extensions.Logging;
-
 using NUnit.Framework;
-
 using Moq;
-
 using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Error
@@ -44,7 +40,6 @@ namespace UnitTests.Pages.Error
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
-
             Activity activity = new Activity("activity");
             activity.Start();
 
