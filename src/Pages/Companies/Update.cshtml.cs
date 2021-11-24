@@ -57,10 +57,10 @@ namespace ContosoCrafts.WebSite.Pages.Companies
                 return Page();
             }
             var companies = CompanyService.GetAllData();
-            var c = companies.Where(a => a.Name == Company.Name && a.JobRoleName == Company.JobRoleName)
+            var companyRequired = companies.Where(a => a.Name == Company.Name && a.JobRoleName == Company.JobRoleName)
                         .Select(b => b)
                         .FirstOrDefault();
-            if(c != null)
+            if(companyRequired != null)
             {
                 var d = CompanyService.DeleteData(Company.Id);
                 return RedirectToPage("./Index");
