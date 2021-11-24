@@ -66,11 +66,13 @@ namespace UnitTests.Controllers
         public void Patch_Valid_Should_Return_Ok()
         {
             //Arrange
+            //A new variable of type RatingRequest
             var data = new RatingRequest
             {
                 ProductId = "jenlooper-cactus",
                 Rating = 5
             };
+            // A variable to hold the result
             var result = testProductController.Patch(data);
             
             //Act
