@@ -86,6 +86,9 @@
     int voteCount = 0;
     string voteLabel;
 
+    /// <summary>
+    /// GetCurrentRating method that counts the ratings and aggregates them
+    /// </summary>
     void GetCurrentRating()
     {
         if(selectedProduct.Ratings == null)
@@ -103,6 +106,10 @@
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
 
+    /// <summary>
+    /// This method submits the rating of particular product
+    /// </summary>
+    /// <param name="rating"></param>
     void SubmitRating(int rating)
     {
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
