@@ -1,13 +1,7 @@
 ﻿using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
@@ -25,7 +19,6 @@ namespace ContosoCrafts.WebSite.Controllers
             CompanyService = companyService;
         }
 
-       
         // Getter for CompanyService
         public JsonFileCompanyService CompanyService { get; }
 
