@@ -1,8 +1,6 @@
 using System.Linq;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
@@ -42,7 +40,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
             {
                 return RedirectToPage("./Index");
             }
-
             return Page();
         }
     }
