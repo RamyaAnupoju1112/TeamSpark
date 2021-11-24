@@ -46,6 +46,21 @@ namespace UnitTests.Pages.Product.Update
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Floppy Crop", pageModel.Product.Title);
         }
+
+        /// <summary>
+        /// Testing OnGet if it redirects to Index page when a bogus id is passed
+        /// </summary>
+        [Test]
+        public void OnGet_InValid_Id_Bogus_Should_Return_Products()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("Bogus") as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("./Index", result.PageName);
+        }
         #endregion OnGet
 
         /// <summary>
