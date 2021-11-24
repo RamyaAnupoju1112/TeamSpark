@@ -77,7 +77,6 @@ namespace UnitTests.Components
 
         #region SubmitRating
 
-
         /// <summary>
         /// SubmitRating valid id click unstarted should increment count and check star
         /// </summary>
@@ -168,7 +167,6 @@ namespace UnitTests.Components
             Then record the state of the count and star check status
             Then check a star
             Then check again the state of the cound and star check status
-
              */
 
             // Arrange
@@ -228,7 +226,6 @@ namespace UnitTests.Components
             Assert.AreEqual(true, postVoteCountString.Contains("7 Votes"));
             Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
         }
-
         #endregion SubmitRating
     }
 }
