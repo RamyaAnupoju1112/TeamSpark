@@ -100,6 +100,27 @@ namespace UnitTests.Pages.Company.Update
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
+        [Test]
+        public void OnPost_Valid_With_Duplicate_Check_Should_Return_Companies()
+        {
+            // Arrange
+            pageModel.Company = new CompanyModel
+            {
+                Name = "Microsoft",
+                H1BSupport = "True",
+                JobRoleName = "Software Developer"
+            };
+
+            // Act
+            var result = pageModel.OnPost() as RedirectToPageResult;
+            var requiredCompany = TestHelper.CompanyService.GetAllData()
+                .Where(c => c.Name == "Microsoft" && c.JobRoleName == "Software Developer");
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
+            Assert.AreEqual(1, requiredCompany.Count());
+        }
         #endregion OnPost
     }
 }
