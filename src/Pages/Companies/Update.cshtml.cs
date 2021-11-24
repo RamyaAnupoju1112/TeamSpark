@@ -56,7 +56,15 @@ namespace ContosoCrafts.WebSite.Pages.Companies
             {
                 return Page();
             }
-
+            var companies = CompanyService.GetAllData();
+            var c = companies.Where(a => a.Name == Company.Name && a.JobRoleName == Company.JobRoleName)
+                        .Select(b => b)
+                        .FirstOrDefault();
+            if(c != null)
+            {
+                var d = CompanyService.DeleteData(Company.Id);
+                return RedirectToPage("./Index");
+            }
             CompanyService.UpdateData(Company);
 
             return RedirectToPage("./Index");
