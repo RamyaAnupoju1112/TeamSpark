@@ -135,7 +135,6 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         private void SaveData(IEnumerable<ProductModel> products)
         {
-
             using (var outputStream = File.Create(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
