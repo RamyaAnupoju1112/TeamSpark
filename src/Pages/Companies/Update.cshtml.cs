@@ -62,7 +62,7 @@ namespace ContosoCrafts.WebSite.Pages.Companies
                         .FirstOrDefault();
             if(companyRequired != null)
             {
-                var d = CompanyService.DeleteData(Company.Id);
+                CompanyService.DeleteData(Company.Id);
                 return RedirectToPage("./Index");
             }
             CompanyService.UpdateData(Company);
