@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages.Companies;
 using ContosoCrafts.WebSite.Models;
+using System.Linq;
 
 namespace UnitTests.Pages.Company.Update
 {
