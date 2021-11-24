@@ -1,9 +1,6 @@
 using Microsoft.Extensions.Logging;
-
 using NUnit.Framework;
-
 using Moq;
-
 using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Privacy
@@ -51,7 +48,6 @@ namespace UnitTests.Pages.Privacy
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
         }
-
         #endregion OnGet
     }
 }
