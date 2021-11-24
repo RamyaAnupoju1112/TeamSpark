@@ -1,10 +1,6 @@
 ﻿using ContosoCrafts.WebSite.Pages.Companies;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTests.Pages.Company
 {
@@ -31,7 +27,6 @@ namespace UnitTests.Pages.Company
  }
 
         #endregion TestSetup
-
         #region OnGet
         /// <summary>
         /// Testing If on get the it is returnig all the comapny names
