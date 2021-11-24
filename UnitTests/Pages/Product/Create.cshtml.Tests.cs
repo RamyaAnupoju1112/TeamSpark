@@ -1,9 +1,6 @@
 using System.Linq;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
-
 
 namespace UnitTests.Pages.Product.Create
 {
@@ -28,7 +25,6 @@ namespace UnitTests.Pages.Product.Create
             {
             };
         }
-
         #endregion TestSetup
 
         /// <summary>
