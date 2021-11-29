@@ -2,7 +2,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages.Companies;
-using ContosoCrafts.WebSite.Models;
+
 
 namespace UnitTests.Pages.Company.Delete
 {
