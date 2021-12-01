@@ -1,3 +1,66 @@
 ﻿@page
+@model IndexModel
 @{
+    ViewData["Title"] = "Contact Us";
 }
+<head>
+    <h2>
+        Contact us
+    </h2>
+    <style media="all">
+        div {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        #Content1, #Content2, #Content3, #Content4 {
+            border-bottom: 3px solid #4588ba;
+            margin-bottom: 10px;
+            
+        }
+
+        div p {
+            background: white;
+            line-height: 150px;
+            font-size: medium;
+            font-family: sans-serif;
+            color: black;
+            margin: 0;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="Content1">
+        <dl>
+            <dd><img class ="pujith_img" src="~/images/pujith.jpeg" /></dd>
+            <dt><strong>Pujith Neelagiri</strong></dt>
+            <dd>pneelagiri@seattleu.edu</dd>
+        </dl>
+    </div>
+
+    <div id="Content2">
+        <dl>
+            <dd><img class="ramya_img" src="~/images/ramya.jfif" /></dd>
+            <dt><strong>Ramya Anupoju</strong></dt>
+            <dd>ranupoju@seattleu.edu</dd>
+        </dl>
+    </div>
+
+    <div id="Content3">
+        <dl>
+            <dd><img class="sagar_img" src="~/images/sagar.jpeg" /></dd>
+            <dt><strong>Sagar Vinayak</strong></dt>
+            <dd>svinayak@seattleu.edu</dd>
+        </dl>
+    </div>
+
+    <div id="Content4">
+        <dl>
+            <dd><img class="pujith_img" src="~/images/sanchita.jpeg" /></dd>
+            <dt><strong>Sanchita Jain</strong></dt>
+            <dd>sjain@seattleu.edu</dd>
+        </dl>
+    </div>
+    </body>
