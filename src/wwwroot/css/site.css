@@ -166,8 +166,8 @@ button.accept-policy {
     text-align: center;
     padding: 20px 16px;
     text-decoration: blink;
-    width: 110px;
-    font-size: 14px;
+    width: 125px;
+    font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -209,10 +209,10 @@ ul {
 }
 
 .bg-navbar {
-    background: -webkit-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
-    background: -o-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
-    background: -moz-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
-    background: linear-gradient(110deg, #b3d7ffd1 60%, #252152 60%);
+    background: -webkit-linear-gradient(110deg, #e9a8a6 68%, #252152 60%);
+    background: -o-linear-gradient(110deg, #e9a8a6 68%, #252152 60%);
+    background: -moz-linear-gradient(110deg, #e9a8a6 68%, #252152 60%);
+    background: linear-gradient(110deg, #b3d7ffd1 68%, #252152 60%);
 }
 
 #up-button {
