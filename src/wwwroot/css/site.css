@@ -218,6 +218,15 @@ ul {
     width: 20%;
 }
 
+.ramya_img {
+    height: 20%;
+    width: 20%;
+}
+
+.sanchita_img {
+    height: 20%;
+    width: 20%;
+}
 .bg-navbar {
     background: -webkit-linear-gradient(110deg, #e9a8a6 68%, #252152 60%);
     background: -o-linear-gradient(110deg, #e9a8a6 68%, #252152 60%);
